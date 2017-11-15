@@ -29,9 +29,10 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 // 连接到你MongoDB服务器的test数据库
-mongoose.connect("mongodb://localhost:27017/test");
+// mongoose.Promise = require('bluebird');
+mongoose.connect("mongodb://localhost:27017/test", {useMongoClient: true});
 setUpPassport();
-
+mongoose.Promise = global.Promise;
 var db = mongoose.connection;
 // 连接成功
 db.on('open', function(){
