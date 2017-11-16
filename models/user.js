@@ -1,4 +1,4 @@
-// 代码清单 8.8 models/user.js编写完成之后
+// models/user.js
 var bcrypt = require("bcrypt-nodejs");
 var SALT_FACTOR = 10;
 var mongoose = require("mongoose");

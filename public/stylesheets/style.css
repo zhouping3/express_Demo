@@ -6,3 +6,25 @@ body {
 a {
   color: #00B7FF;
 }
+
+.login,.signup{
+  width: 300px;
+  text-align: center;
+  margin: 0 auto;
+}
+.login input, .signup input{
+  margin-bottom: 20px;
+}
+
+.login textarea{
+  margin-bottom: 20px;
+}
+.edit{
+  width: 300px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.edit .form-group{
+  margin-bottom: 20px;
+}

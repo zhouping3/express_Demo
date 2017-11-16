@@ -1,7 +1,32 @@
 <% include _header %>
-<h1>Welcome to Learn About Me!</h1>
+<h1>Welcome !</h1>
+<table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>用户名</th>
+                <th>描述</th>
+            </tr>
+        </thead>
+        <tbody>
 <% users.forEach(function(user) { %>
-    <div class="panel panel-default">
+
+    <tr>
+        <td>
+            <a href="/users/<%= user.username %>">
+                <%= user.name() %>
+            </a>
+        </td>
+        <td>
+                <% if (user.bio) { %>
+                    <%= user.bio %>
+                <% } %>
+        </td>
+    </tr>
+    
+
+
+
+    <!-- <div class="panel panel-default">
         <div class="panel-heading">
             <a href="/users/<%= user.username %>">
                 <%= user.name() %>
@@ -10,6 +35,8 @@
         <% if (user.bio) { %>
             <div class="panel-body"><%= user.bio %></div>
         <% } %>
-    </div>
+    </div> -->
 <% }) %>
+</tbody>
+</table>
 <% include _footer %>
